@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AddDoctor</title>
+</head>
+<body>
+
+	<h1>All Added Doctors</h1>
+
+	<hr>
+	<h2>Add New Blog Doctors : </h2>
+	<form action="/adddoctor" method="POST">
+		Doctor Name : <input type="text" name="doctname" id="doctname">
+		<br>
+		Doctor Degree : <input type="text" name="doctdegree" id="doctdegree">
+		<br>
+		Doctor Disease Exeprtise : <input type="text" name="doctdisexp" id="doctdisexp">
+		<br>
+		Doctor Hospital : <input type="text" name="docthospital" id="docthospital">
+		<br>
+		Doctor Phone No : <input type="number" name="doctphno" id="doctphno">
+		<br>
+		Doctor Location : <input type="text" name="doctlocation" id="doctlocation">
+		<br>
+		<input type="submit" value="save">	
+	</form>
+
+<hr>
+
+		<table border="1">
+		<thead>
+			<td><h3>Id</h3></td>
+			<td><h3>Doctor Name</h3></td>
+			<td><h3>Doctor Degree</h3></td>
+			<td><h3>Doctor Diasease Expertise</h3></td>
+			<td><h3>Doctor Hospital</h3></td>
+			<td><h3>Doctor Phone No</h3></td>
+			<td><h3>Doctor Location</h3></td>
+			<td><h3>Doctor Added</h3></td>
+			<td><h3>Edit</h3></td>
+			<td><h3>Delete</h3></td>
+		</thead>
+		{% for doctor in doctors %}
+		<tr>
+			<td><h3>{{ doctor.id }}</h3></td>
+			<td><h3>{{ doctor.doctname }}</h3></td>
+			<td><h3>{{ doctor.doctdegree }}</h3></td>
+			<td><h3>{{ doctor.doctdisexp }}</h3></td>
+			<td><h3>{{ doctor.docthospital }}</h3></td>
+			<td><h3>{{ doctor.doctphno }}</h3></td>
+			<td><h3>{{ doctor.doctlocation }}</h3></td>
+			<td><h3>{{ doctor.date_posted }}</h3></td>
+			<td><a href="/adddoctor/doctdelete/{{ doctor.id }}"> Delete </a></td>
+			<td><a href="/adddoctor/doctedit/{{ doctor.id }}"> Edit </a></td>
+		</tr>
+		{% endfor %}
+
+	</table>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User Profile</title>
+</head>
+<body>
+
+	<h1>Editing Doctor Detais</h1>
+
+	<hr>
+	<h2>Edit : </h2>
+	<form action="/adddoctor/doctedit/{{doctor.id}}" method="POST">
+		Doctor Name : <input type="text" name="doctname" id="doctname" value="{{doctor.doctname}}">
+		<br>
+		Doctor Degree : <input type="text" name="doctdegree" id="doctdegree" value="{{doctor.doctdegree}}">
+		<br>
+		Doctor Hospital : <input type="text" name="docthospital" id="docthospital" value="{{doctor.docthospital}}">
+		<br>
+		Doctor Phone No : <input type="number" name="doctphno" id="doctphno" value="{{doctor.doctphno}}">
+		<br>
+		Doctor Location : <input type="text" name="doctlocation" id="doctlocation" value="{{doctor.doctlocation}}">
+		<br>
+		
+		<input type="submit" value="Save">	
+	</form>
+	<hr>
+
+
+</body>
+</html>

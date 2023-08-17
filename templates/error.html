@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Disease Prediction</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    
+</head>
+
+<header id="header" class="header header-hide ">
+    <div class="container">
+        <div id="logo" class="pull-left">
+            <h1><a href="main.html" class="scrollto"><span class="fa fa-heartbeat"></span> Disease Prediction </a></h1>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="/">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('login_page') }}">Login</a></li>
+                <li><a href="{{ url_for('register_page') }}">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    
+<body  style="margin:100px;">
+
+	<p class="error"><strong>Error: </strong>{{e}}</p>
+
+</body>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Disease Prediction</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='img/apple-icon.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='font-awesome/css/font-awesome.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Style.css')}}" type="text/css" media="all" />
+</head>
+
+<header id="header" class="header header-hide ">
+    <div class="container">
+        <div id="logo" class="pull-left">
+            <h1><a href="/" class="scrollto"><span class="fa fa-heartbeat"></span> Disease Prediction </a></h1>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('main') }}">Home</a></li>
+                <li><a role="presentation" href="{{ url_for('login_page') }}">Login </a></li>
+                <li class="menu-active"><a role="presentation" href="{{ url_for('register_page') }}">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="main-w3layouts-header-sec">
+        <section class="banner_w3pvt" id="home">
+            <div class="csslider infinity" id="slider1">
+                <div class="banner-top" style="z-index: 1;">
+                    <div class="overlay">
+                        <div class="login">
+                            <div class="container">
+                                <div class="loginalert">
+                                    {% with messages = get_flashed_messages(with_categories=true) %}
+                                    {% if messages %}
+                                    {% for category, message in messages %}
+
+                                    <div {% if category == 'success' %} class="alert alert-success alert-dismissible" {% elif category == 'warning' %} class="alert alert-warning alert-dismissible" {% elif category == 'danger' %} class="alert alert-danger alert-dismissible" {% else %} class="alert alert-info alert-dismissible" {% endif %} role="alert"><span class="glyphicon glyphicon-asterisk"></span>
+                                        <button type="button" style="margin-top:-5px;" class="close" data-dismiss="alert" aria-label="Close" aria-hidden="true">&times;</button>{{message}}</div>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {%endwith%}
+                                </div>
+                                <div class="form-container sign-in-container">
+                                    <form method=post action="/register/">
+                                        <!--name of signup page-->
+                                        <h1>Create New Account</h1>
+                                        <!--<div class="social-container">
+                                            <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                                            <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+                                        </div>-->
+                                        <p style="color: black; margin-bottom: 20px;">Continue to Disease Prediction</p>
+                                        <input id="username" placeholder="Username" name="username" required type="text" value="" min="4" max="10" autofocus>
+                                        <input id="email" placeholder="Email" name="email" required type="email" value="">
+                                        <input id="password" placeholder="Password" name="password" required type="password" value="">
+                                        <input id="confirm" placeholder="Confirm Password" name="confirm" required type="password" value="">
+                                        <br>
+                                        <button class="ghost" type=submit value=Register>Sign Up</button>
+                                    </form>
+                                </div>
+                                <div class="overlay-container-log" id="reg">
+                                    <div class="overlay-panel">
+                                        <h1>Hello, Friend!</h1>
+                                        <p>Enter your personal details and start journey with us</p>
+                                        <button class="ghost" id="signUp" onclick="location.href='{{ url_for('login_page') }}'">Sign In</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                var password = document.getElementById("password"),
+                                    confirm_password = document.getElementById("confirm");
+
+                                function validatePassword() {
+                                    if (password.value != confirm_password.value) {
+                                        confirm_password.setCustomValidity("Passwords Don't Match");
+                                    } else {
+                                        confirm_password.setCustomValidity('');
+                                    }
+                                }
+                                password.onchange = validatePassword;
+                                confirm_password.onkeyup = validatePassword;
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="cpy-right py-3">
+            <div class="container">
+                <div class="row">
+                    <p class="col-md-10 text-left">© 2019 Disease Prediction. All rights reserved | Design by Rajdeep.</p>
+                    <!-- move top icon -->
+                    <a href="#home" class="move-top text-lg-right text-center col-md-2"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+                    <!-- //move top icon -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

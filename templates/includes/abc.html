@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Disease Prediction</title>
+    <link rel="icon" href="{{ url_for('static',filename='img/1icon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Style.css')}}">
+    <!-- /Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    {% block head %}{% endblock %}
+</head>
+
+<header>
+    <div class="container">
+        <div class="header d-lg-flex justify-content-between align-items-center">
+            <div class="header-section">
+                <h1>
+                    <a class="navbar-brand logo editContent" href="/">
+                        <span class="fa fa-heartbeat"></span> Disease Prediction
+                    </a>
+                </h1>
+            </div>
+            <div class="nav_section">
+                <nav>
+                    <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu">
+                        <li class="active"><a href="{{ url_for('main') }}">Home</a></li>
+                        {% if session.username == 'admin' %}
+                        <li><a role="presentation" href="{{ url_for('database') }}">Database Access! </a></li>
+                        {% endif %}
+                        {% if session.logged_in %}
+                        <li><a role="presentation" href="{{ url_for('logout') }}"> Log Out </a></li>
+                        {% else %}
+
+                        <li><a href="{{ url_for('login_page') }}">About </a></li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul class="inner-dropdown" role="presentation">
+                                <li><a href="#lab">Laboratory</a></li>
+                                <li><a href="#test">Reviews</a></li>
+                            </ul>
+                        </li>
+                        <li><a role="presentation" href="{{ url_for('login_page') }}">Contact Us</a></li>
+                        <li><a role="presentation" href="{{ url_for('login_page') }}">Login</a></li>
+                        <li><a role="presentation" href="{{ url_for('register_page') }}">Register/a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<header id="header" class="header header-hide ">
+    <div class="container">
+        <div id="logo" class="pull-left">
+            <h1><a href="#body" class="scrollto"><span>Financial</span>Advisor</a></h1>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="{{ url_for('main') }}">Home</a></li>
+                {% if session.username == 'admin' %}
+                <li><a role="presentation" href="{{ url_for('database') }}">Database Access! </a></li>
+                {% endif %}
+                {% if session.logged_in %}
+                <li><a role="presentation" href="{{ url_for('logout') }}"> Log Out </a></li>
+                {% else %}
+                <li><a role="presentation" href=>Login </a></li>
+                <li><a role="presentation" href="{{ url_for('register_page') }}">Sign up </a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-migrate.min.js')}}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/hoverIntent.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/superfish.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/easing.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+    {% block body %}{% endblock %}
+</body>
+
+</html>

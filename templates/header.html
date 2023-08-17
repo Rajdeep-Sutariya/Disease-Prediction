@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Financial Advisor</title>
+    <link rel="icon" href="{{ url_for('static',filename='img/1icon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/modal-video.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Style.css')}}">
+    {% block head %}{% endblock %}
+</head>
+
+<header id="header" class="header header-hide ">
+    <div class="container">
+        <div id="logo" class="pull-left">
+            <h1><a href="#body" class="scrollto"><span>Financial</span>Advisor</a></h1>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="{{ url_for('main') }}">Home</a></li>
+                {% if session.username == 'admin' %}
+                <li><a role="presentation" href="{{ url_for('database') }}">Database Access! </a></li>
+                {% endif %}
+                {% if session.logged_in %}
+                <li><a role="presentation" href="{{ url_for('logout') }}"> Log Out </a></li>
+                {% else %}
+                <li><a role="presentation" href="{{ url_for('login_page') }}">Login </a></li>
+                <li><a role="presentation" href="{{ url_for('register_page') }}">Sign up </a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-migrate.min.js')}}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/hoverIntent.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/superfish.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/easing.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+    {% block body %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slider.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Style2.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url_for('static',filename='font-awesome/css/font-awesome.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.min.css')}}">
+
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    {% block body%}
+    <header id="header" class="header header-hide ">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <h1><a href=""{{ url_for('dashboard') }}"" class="scrollto"><span class="fa fa-heartbeat"></span> Disease Prediction </a></h1>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="{{ url_for('main') }}">Home</a></li>
+                    <li><a role="presentation" href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="login">
+        <div style="margin-top: 100px;">
+            <button class="tablink" onclick="openTab('Symptom', this, 'red')" id="defaultOpen">Symptom checker</button>
+            <button class="tablink" onclick="openTab('Doctor', this, 'red')" id="doctortab">Find My Doctor</button>
+        </div>
+
+        <div class="container">
+            <div class="form-container sign-in-container">
+                <div id="Symptom" class="tabcontent">
+                    <form name="SymptomForm" id="SymForm" method="POST" action=/disease_predict> <div class="head">
+                        <h4> Symptom Checker</h4>
+
+                </div>
+                <div class="form-group">
+                    <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom1" placeholder="Symptom1">
+                    <datalist id="symp">
+                        {% for symp in symptoms %}
+                        <option value="{{symp}}">{{symp}}</option>
+                        {% endfor %}
+                    </datalist>
+
+                    <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom2" placeholder="Symptom2">
+                    <datalist id="symp">
+                        {% for symp in symptoms %}
+                        <option value="{{symp}}">{{symp}}</option>
+                        {% endfor %}
+                    </datalist>
+
+                    <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom3" placeholder="Symptom3">
+                    <datalist id="symp">
+                        {% for symp in symptoms %}
+                        <option value="{{symp}}">{{symp}}</option>
+                        {% endfor %}
+                    </datalist>
+
+                    <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom4" placeholder="Symptom4">
+                    <datalist id="symp">
+                        {% for symp in symptoms %}
+                        <option value="{{symp}}">{{symp}}</option>
+                        {% endfor %}
+                    </datalist>
+
+                    <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom5" placeholder="Symptom5">
+                    <datalist id="symp">
+                        {% for symp in symptoms %}
+                        <option value="{{symp}}">{{symp}}</option>
+                        {% endfor %}
+                    </datalist>
+
+                </div>
+
+                <button type="submit" class="ghost" id="signUp" name=form>Check</button>
+                </form>
+            </div>
+            <div id="Doctor" class="tabcontent">
+                <div class="head">
+                    <h4 style="margin-top: 40px;">Find My Doctor</h4>
+                </div>
+                <form name="Doctor_search" id="DoctorForm" method="POST" action=/find_doctor> <input type="text" class="form-control" name="doctor" placeholder="Doctor">
+                    <br>
+                    <button type="submit" class="ghost" id="signUp" name="search_doctor">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="overlay-container-log" style="background-color: transparent;">
+            <div class="overlay-panel">
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="cpy-right py-3">
+        <div class="container">
+            <div class="row">
+                <p class="col-md-10 text-left">© 2019 Disease Prediction. All rights reserved | Design by Rajdeep.</p>
+                <!-- move top icon -->
+                <a href="home" class="move-top text-lg-right text-center col-md-2"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+                <!-- //move top icon -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(tabName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+    </script>
+
+
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    {% endblock %}
+
+</body>
+
+</html>

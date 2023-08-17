@@ -1,0 +1,94 @@
+{% extends 'Admin/adminheader.html' %}
+
+{% block body %}
+<div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="{{url_for('static', filename='img/sidebar-1.jpg')}}">
+        <div class="logo"><a href="/Adashboard" class="simple-text logo-normal">Disease Prediction</a></div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Adashboard">
+                        <i class="material-icons">dashboard</i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('user') }}">
+                        <i class="material-icons">person</i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">content_paste</i>
+                        <p>Table List<i class="fas fa-caret-down" style="width: 1rem; text-align: center; float: right; vertical-align: 0; border: 0; margin-top: -3px; font-weight: 900; font-family: " Roboto", "Helvetica" , "Arial" , sans-serif;"></i></p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 230px;">
+                        <a class="dropdown-item" href="{{ url_for('Usertables') }}">User</a>
+                        <a class="dropdown-item" href="{{ url_for('Doctortables') }}">Doctor</a>
+                        <a id="da" class="dropdown-item active" href="{{ url_for('Labtables') }}">Laboratory</a>
+                        <a class="dropdown-item" href="{{ url_for('feedback_table') }}">Feedback Table</a>
+                        </div>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('maps') }}">
+                        <i class="material-icons">location_ons</i>
+                        <p>Maps</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('notifications') }}">
+                        <i class="material-icons">notifications</i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% endblock %}
+    {% block other %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">Add <b>Laboratory </b></h4>
+                        </div>
+                        <div class="card-body">
+                            <form action="/Labtables/Labadd" method="POST">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating">Laboratory Name</label>
+                                            <input type="text" name="lanbname" id="labname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating">Laboratory Phone No</label>
+                                            <input type="text" name="labphno" id="dlabphno" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating">Laboratory Location</label>
+                                            <input type="text" name="lablocation" id="lablocation" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary pull-right">Add</button>
+
+                                <div class="clearfix"></div>
+                            </form>
+                            <!--<input type="submit" value="save">-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

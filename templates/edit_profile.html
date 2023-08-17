@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Style22.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url_for('static',filename='font-awesome/css/font-awesome.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.min.css')}}">
+
+</head>
+
+<body>
+    <header id="header" class="header header-hide ">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <h1><a href="{{ url_for('dashboard') }}" class="scrollto"><span class="fa fa-heartbeat"></span> Disease Prediction </a></h1>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="{{ url_for('dashboard') }}">Home</a></li>
+                    <li><a href="{{ url_for('find_doctor') }}">Find Doctor</a></li>
+                    <li><a href="{{ url_for('find_lab') }}">Laboratoty</a></li>
+                    <li><a href="{{ url_for('edit_profile') }}">Profile</a></li>
+                    <li><a role="presentation" href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="login" id="home">
+        <div class="container">
+            <div class="form-container sign-in-container">
+                <div class="loginalert">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+
+                    <div {% if category == 'success' %} class="alert alert-success alert-dismissible" {% elif category == 'warning' %} class="alert alert-warning alert-dismissible" {% elif category == 'danger' %} class="alert alert-danger alert-dismissible" {% else %} class="alert alert-info alert-dismissible" style="margin-bottom:0px;" {% endif %} role="alert"><span class="glyphicon glyphicon-asterisk"></span>
+                        <button type="button" style="margin-top:-11px;width:100px;" class="close" data-dismiss="alert" aria-label="Close" aria-hidden="true">&times;</button>{{message}}</div>
+                    {% endfor %}
+                    {% endif %}
+                    {%endwith%}
+                </div>
+                <div id="Symptom" class="tabcontent">
+                    {% for user in user %}
+                    <form action="/insertProfile/{{user.id}}" method="POST">
+
+
+                        <div class="head">
+                            <h4> Edit Profile</h4>
+                        </div>
+
+                        <label class="labela">Username: </label>
+                        <input id="username" placeholder="Username" name="username" required type="text" value="{{user.username}}" min="4" max="10"  disabled>
+                        <label class="labela">Email: </label>
+                        <input id="email" placeholder="Email" name="email" required type="email" value="{{user.email}}" autofocus>
+                        <label class="labela">Mobile No: </label>
+                        <input id="phno" placeholder="Mobile  Number" name="phno" type="tel" pattern="^\d{10}$" value="{{user.phno}}">
+                        <label class="labela">Address: </label>
+                        <textarea name="addr" rows="5" placeholder="Add address" value="{{user.addr}}">{{user.addr}}</textarea>
+                        <label class="labela">Gender: </label>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col">
+                                <input type="radio" id="male" name="gender" value="male" checked>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" id="female" name="gender" value="female" >
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="ghost" id="signUp" name="form">Save</button>
+                    </form>
+
+                    {%endfor%}
+
+                    <button style="margin-top:2px; width:80%; margin-left:50px;" class="ghost" id="signUp" onclick="location.href='{{ url_for('reset_password') }}'">Reset Password</button>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="cpy-right py-3">
+        <div class="container">
+            <div class="row">
+                <p class="col-md-10 text-left">© 2019 Disease Prediction. All rights reserved | Design by Rajdeep.</p>
+                <!-- move top icon -->
+                <a href="#home" class="move-top text-lg-right text-center col-md-2"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+                <!-- //move top icon -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

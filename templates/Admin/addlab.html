@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Laboratory</title>
+</head>
+<body>
+
+	<h1>All Added Laboratories</h1>
+
+	<hr>
+	<h2>Add New Laboratory : </h2>
+	<form action="/addlab" method="POST">
+		Laboratory Name : <input type="text" name="labname" id="labname">
+		<br>
+		Laboratory Phone No : <input type="number" name="labphno" id="labphno">
+		<br>
+		Laboratory Location : <input type="text" name="lablocation" id="lablocation">
+		<br>
+		<input type="submit" value="save">	
+	</form>
+
+<hr>
+
+		<table border="1">
+		<thead>
+			<td><h3>Id</h3></td>
+			<td><h3>Doctor Name</h3></td>
+			<td><h3>Laboratory Phone No</h3></td>
+			<td><h3>Laboratory Location</h3></td>
+			<td><h3>Doctor Added</h3></td>
+			<td><h3>Edit</h3></td>
+			<td><h3>Delete</h3></td>
+		</thead>
+		{% for laboratory in laboratory %}
+		<tr>
+			<td><h3>{{ laboratory.id }}</h3></td>
+			<td><h3>{{ laboratory.labname }}</h3></td>
+			<td><h3>{{ laboratory.labphno }}</h3></td>
+			<td><h3>{{ laboratory.lablocation }}</h3></td>
+			<td><h3>{{ laboratory.date_posted }}</h3></td>
+			<td><a href="/addlab/labdelete/{{ laboratory.id }}"> Delete </a></td>
+			<td><a href="/addlab/labedit/{{ laboratory.id }}"> Edit </a></td>
+		</tr>
+		{% endfor %}
+
+	</table>
+
+</body>
+</html>

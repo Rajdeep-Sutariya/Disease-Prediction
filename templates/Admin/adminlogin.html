@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Disease Prediction</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='img/apple-icon.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='img/apple-icon.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='font-awesome/css/font-awesome.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Style.css')}}" type="text/css" media="all" />
+
+</head>
+
+<header id="header" class="header header-hide ">
+    <div class="container">
+        <div id="logo" class="pull-left">
+            <h1><a href="/" class="scrollto"><span class="fa fa-heartbeat"></span> Disease Prediction </a></h1>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('main') }}">User HomePage</a></li>
+                <li class="menu-active"><a role="presentation" href="{{ url_for('adminlogin') }}">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="login">
+
+        <div class="container">
+            <div class="loginalert">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+
+                <div {% if category == 'success' %} class="alert alert-success alert-dismissible" {% elif category == 'warning' %} class="alert alert-warning alert-dismissible" {% elif category == 'danger' %} class="alert alert-danger alert-dismissible" {% else %} class="alert alert-info alert-dismissible" {% endif %} role="alert"><span class="glyphicon glyphicon-asterisk"></span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-top:-5px;" aria-hidden="true">&times;</button>{{message}}</div>
+                {% endfor %}
+                {% endif %}
+                {%endwith%}
+            </div>
+            <div class="form-container sign-in-container">
+                <form method=post action="/adminlogin">
+                    <!--name of signin page-->
+                    <h1>Sign In</h1>
+                    <br><input id="username" placeholder="Username" name="username" required type="text" value="" min="4" max="20" autofocus>
+                    <input id="password" placeholder="Password" name="password" required type="password" value="">
+                    <a href="{{url_for('forget_password')}}">Forgot your password?</a>
+                    <button type=submit value=Login class="ghost" id="signUp">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container-log" id="log">
+                <div class="overlay-panel">
+                    <h1>Administration</h1>
+                    <p style="font-size: 20px;">
+                        Welcome Back!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="cpy-right py-3">
+        <div class="container">
+            <div class="row">
+                <p class="col-md-10 text-left">© 2019 Disease Prediction. All rights reserved | Design by Rajdeep.</p>
+                <!-- move top icon -->
+                <a href="home" class="move-top text-lg-right text-center col-md-2"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+                <!-- //move top icon -->
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

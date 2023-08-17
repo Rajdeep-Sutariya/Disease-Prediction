@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Disease Prediction</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slider.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Style.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url_for('static',filename='font-awesome/css/font-awesome.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.min.css')}}">
+</head>
+
+<header id="header" class="header header-hide ">
+    <div class="container">
+        <div id="logo" class="pull-left">
+            <h1><a href="/" class="scrollto"><span class="fa fa-heartbeat"></span> Disease Prediction </a></h1>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li class="menu-active"><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('login_page') }}">Login</a></li>
+                <li><a href="{{ url_for('register_page') }}">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <!-- mian-content -->
+    <div class="main-w3layouts-header-sec inner" id="home">
+        <div class="overlay inner">
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- /breadcrumb -->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item menu-active">Contact US</li>
+    </ol>
+    <!-- //breadcrumb -->
+    <!--/banner-bottom -->
+    <section class="banner-bottom py-5">
+
+        <div class="container-fluid py-md-4 inner-sec-w3ls">
+            <div class="header-w3layouts text-center mb-5">
+                <h3 class="title-w3pvt mb-5">I’ll always happy to help you</h3>
+            </div>
+
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=23.033863, 72.585022&amp;q=Krishna%20nager%2C%20Ahmedabad%2C%20Gujarat%2C%20India%20+(My%20comapny%20)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
+
+                <div class="main_grid_contact">
+                    <div class="form">
+                        <h3 class="text-capitalize mb-4">Get In touch</h3>
+                        <form action="/feedback_page/" method="post">
+                            <div class="input-group mt-3">
+                                <input type="text" class="margin2 form-control" name="feedback_name" id="feedback_name"  placeholder="Full name" required="">
+                                <input type="text"  name="feedback_subject" id="feedback_subject" class="form-control" placeholder="Subject" required="">
+                            </div>
+                            <div class="input-group mt-3">
+                                <input type="email" class="margin2 form-control" name="feedback_email" id="feedback_email" placeholder="mail@example.com" required="">
+                                <input type="text" name="number" class="form-control" placeholder="phone number" required="">
+                            </div>
+                            <div class="input-group mt-3">
+                                <textarea rows="4" cols="50" name="feedback_message" class="form-control" placeholder="message"></textarea>
+                            </div>
+                            <div class="input-group1 mt-3">
+                                <button class="submit btn form-control" style="height: 50px; background-color: orange;">Send </button>
+                            </div>
+                        </form>
+                    </div>                    
+                    <div class="contact-right-info">
+                        <h3 class="text-capitalize mb-3">Contact Info</h3>
+                        <p class="">You can contact us as follows.</p>
+                        <address>
+                            <p class="mt-3"><span class="fa fa-map-marker"></span> Ahmedabad, Gujarat, <span> India.</span> </p>
+                            <p class="my-2"><span class="fa fa-phone"></span> +91 99999 99999 </p>
+                            <p class=""><span class="fa fa-envelope-open"></span> <a href="mailto:mail@example.com"> rajdeep.sr73@gmail.com</a> </p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="list-unstyled row text-center mt-lg-5 mt-4 px-lg-5">
+                <li class="col-lg-4 adress-w3pvt-info">
+                    <div class=" adress-icon">
+                        <span class="fa fa-map-marker"></span>
+                    </div>
+
+                    <h6>Location</h6>
+                    <p>Ahmedabad
+                        <br>Gujarat, India. </p>
+                </li>
+
+                <li class="col-lg-4 adress-w3pvt-info">
+                    <div class="adress-icon">
+                        <span class="fa fa-envelope-open-o"></span>
+                    </div>
+                    <h6>Email</h6>
+                    <a href="mailto:info@example.com" class="mail">rajdeep.sr73@gmail.com</a>
+                    <br>
+                    <a href="mailto:info@example.com" class="mail"></a>
+                </li>
+                <li class="col-lg-4 adress-w3pvt-info">
+
+                    <div class="adress-icon">
+                        <span class="fa fa-mobile"></span>
+                    </div>
+
+                    <h6>Phone Number</h6>
+                    <p>+91 99999 99999</p>
+                    <p></p>
+
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- //banner-bottom -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-lg-4 footer-grid_section_w3layouts">
+                    <h2 class="logo-2 mb-lg-4 mb-3">
+                        <a href="/"><span class="fa fa-heartbeat"></span>Disease Prediction</a>
+                    </h2>
+                    <p>Excellence Is Our Speciality.<br>Data is collected from multifarious origin, compared, retrieved effective results and accommodate you.</p>
+                    <h4 class="sub-con-fo ad-info my-4">Catch on Social</h4>
+                    <ul class="w3layouts_social_list list-unstyled">
+                        <li>
+                            <a href="#" class="w3pvt_facebook">
+                                <span class="fa fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#" class="w3pvt_twitter">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_dribble">
+                                <span class="fa fa-dribbble"></span>
+                            </a>
+                        </li>
+                        <li class="ml-2">
+                            <a href="#" class="w3pvt_google">
+                                <span class="fa fa-google-plus"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 footer-right">
+                    <div class="w3layouts-news-letter">
+                        <h3 class="footer-title mb-lg-4 mb-3">Newsletter</h3>
+
+                        <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+                        <form action="#" method="post" class="w3layouts-newsletter">
+                            <input type="email" name="Email" placeholder="Enter your email..." required="">
+                            <button class="btn1"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
+
+                        </form>
+                    </div>
+                    <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
+                        <div class="col-md-4 footer-grid_section_w3layouts">
+                            <h3 class="footer-title mb-lg-4 mb-3">Information</h3>
+                            <ul class="list-unstyled w3layouts-icons">
+                                <li>
+                                    <a href="/index">Home</a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="/about">About Us</a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="#">Services</a>
+                                </li>
+                                <li class="mt-3">
+                                    <a href="/contact">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 footer-grid_section_w3layouts">
+                            <!-- social icons -->
+                            <div class="agileinfo_social_icons">
+                                <h3 class="footer-title mb-lg-4 mb-3">Customer Service</h3>
+                                <ul class="list-unstyled w3layouts-icons">
+
+                                    <li>
+                                        <a href="/about">About Us</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="/login">Disease Prediction</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="/login">Disease Precaution</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="/login">Find Doctor</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="/#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- social icons -->
+                        </div>
+                        <div class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5">
+                            <h3 class="footer-title mb-lg-4 mb-3">Contact Info</h3>
+                            <div class="contact-info">
+                                <div class="footer-address-inf">
+                                    <h4 class="ad-info mb-2">Phone</h4>
+                                    <p>+91 99999 99999</p>
+                                </div>
+                                <div class="footer-address-inf my-4">
+                                    <h4 class="ad-info mb-2">Email </h4>
+                                    <p><a href="mailto:rajdeep.sr73@gmail.com">rajdeep.sr73@gmail.com</a></p>
+                                </div>
+                                <div class="footer-address-inf">
+                                    <h4 class="ad-info mb-2">Location</h4>
+                                    <p>Ahmedabad, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="cpy-right py-3">
+        <div class="container">
+            <div class="row">
+                <p class="col-md-10 text-left">© 2019 Disease Prediction. All rights reserved | Design by Rajdeep.</p>
+                <!-- move top icon -->
+                <a href="#home" class="move-top text-lg-right text-center col-md-2"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+                <!-- //move top icon -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

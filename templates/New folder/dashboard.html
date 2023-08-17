@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Disease </title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Medizin Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Style.css')}}" type="text/css" media="all" /><!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <!-- Bootstrap-Core-CSS -->
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slider.css')}}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.css')}}" type="text/css" media="all" />
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+
+<body>
+        <!-- mian-content -->
+        <div class="main-w3layouts-header-sec">
+
+            <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="header d-lg-flex justify-content-between align-items-center">
+                        <div class="header-section">
+                            <h1>
+                                <a class="navbar-brand logo editContent" href="/">
+                                    <span class="fa fa-heartbeat"></span> Disease Prediction
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="nav_section">
+                            <nav>
+                                <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
+                                <input type="checkbox" id="drop" />
+                                <ul class="menu">
+                                    <li class="active"><a href="/">Home</a></li>
+                                    <li><a href="/d_prediction">Services</a></li>
+                                    <li><a href="/about">About </a></li>
+                                    <li>
+                                        <!-- First Tier Drop Down -->
+                                        <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                                        <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                        <input type="checkbox" id="drop-2" />
+                                        <ul class="inner-dropdown">
+											<li><a href="#lab">Laboratory</a></li>
+                                            <li><a href="#test">Reviews</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact">Contact Us</a></li>
+                                    <li><a href="/">Log Out</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
+            <!-- banner -->
+            <section class="banner_w3pvt" id="home">
+                <div class="csslider infinity" id="slider1">
+                    <input type="radio" name="slides" checked="checked" id="slides_1" />
+                    <input type="radio" name="slides" id="slides_2" />
+                    <input type="radio" name="slides" id="slides_3" />
+                    <input type="radio" name="slides" id="slides_4" />
+                    <ul>
+                        <li>
+                            <div class="banner-top">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>We care and protect <span>your </span> health.</h3>
+                                                <h4>We will help to find health, to everyone.</h4>
+                                                <a href="/single" class="read btn mt-3">Read More</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-top1">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>We do our best for you and <span>your </span> health.</h3>
+                                                <h4>We will help to find health, to everyone.</h4>
+                                                <a href="/single" class="read btn mt-3">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-top2">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>We care and protect <span>your </span> health.</h3>
+                                                <h4>We will help to find health, to everyone.</h4>
+                                                <a href="/single" class="read btn mt-3">Read More</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-top3">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>We do our best for you and <span>your </span> health.</h3>
+                                                <h4>We will help to find health, to everyone.</h4>
+                                                <a href="/single" class="read btn mt-3">Read More</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_1"></label>
+                        <label for="slides_2"></label>
+                        <label for="slides_3"></label>
+                        <label for="slides_4"></label>
+                    </div>
+                </div>
+            </section>
+            <!-- //banner -->
+
+
+
+        </div>
+        <!-- //header -->
+        <!--/banner-bottom -->
+        <section class="banner-bottom py-5">
+            <div class="container-fluid inner-sec-w3ls">
+                <div class="feature-grids row text-center">
+                    <div class="col-lg-3 gd-bottom one">
+                        <div class="bottom-gd">
+                            <span class="fa fa-wheelchair" aria-hidden="true"></span>
+                            <h3 class="mb-2">Predict Diseases</h3>
+                            <p>Submit symptums, get predicted disease.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-user-md" aria-hidden="true"></span>
+                            <h3 class="mb-2">Precautions</h3>
+                            <p>Submit symtums, get precaution for disease.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-life-ring" aria-hidden="true"></span>
+                            <h3 class="mb-2">Find Doctor</h3>
+                            <p>Submit symptums, get specialist doctor around.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-folder-open-o" aria-hidden="true"></span>
+                            <h3 class="mb-2">Consult with Doctor</h3>
+                            <p>Submit symptums, get specialist doctor, get consultation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //banner-bottom -->
+        <!-- /last-content -->
+        <section class="last-content">
+            <div class="overlay-last">
+                <div class="container text-center">
+                    <div class="last-w3pvt-inner-content row">
+
+                        <div class="col-md-6 offset-md-6">
+
+                            <form action="#" class="booking" method="post">
+                                <h3 class="mb-4">Book Appointment</h3>
+                                <div class="form-group">
+                                    <input placeholder="Your Name" name="name" type="text" required="">
+                                    <input placeholder="Contact Number" name="number" type="text" required="">
+                                    <input placeholder="Address" type="text" required="">
+                                    <input placeholder="Timing" type="text" required="">
+                                    <button class="book-appo btn mt-3">Quick Appointment </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lab-test py-5" id="lab">
+            <div class="container py-md-5">
+                <div class="row banner-grids mb-lg-5">
+                    <div class="col-lg-6 content-right pt-md-4">
+                        <h5 class="mt-1">Trut Us</h5>
+                        <h4>Excellence Is Our Speciality</h4>
+                        <p class="mt-2 text-left">Integer pulvinar leo id viverra feugiat.Sed porttitor orci vel fermentum elit maximus.Integer sit amet mattis quam, sit amet ultricies velit. Nam libero tempore Curabitur ut turpis massa in condimentum libero. </p>
+                        <ul class="tic-info list-unstyled">
+                            <li>
+
+                                <span class="fa fa-hand-o-right"></span> Integer sit amet mattis quam
+
+                            </li>
+                            <li>
+
+                                <span class="fa fa-hand-o-right"></span> Praesent ullamcorper dui turpis
+
+                            </li>
+                            <li>
+
+                                <span class="fa fa-hand-o-right"></span> Integer sit amet mattis quam
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6 content-left">
+                        <img src="{{url_for('static',filename='images/c4.jpg')}}" alt="" class="img-fluid">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- //lab-test -->
+        <!-- /grids-content1 -->
+        <section class="testimonials py-5" id="test">
+            <div class="container py-lg-3">
+                <div class="header-w3layouts text-center mb-5">
+                    <h3 class="title-w3pvt two mb-3"> Client Reviews </h3>
+
+                </div>
+                <div class="test-content">
+                    <div class="testimonials_grid">
+
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        <p class="sub-test editContent">Integer sit amet mattis quam, sit amet ultricies velit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod possimus.
+                        </p>
+                        <div class="testi_grid">
+                            <img src="{{url_for('static',filename='images/c1.jpg')}}" alt=" " class="img-fluid">
+                            <h5>Thomas Carl</h5>
+                            <label>Description </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //grids-content1 -->
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-lg-4 footer-grid_section_w3layouts">
+                        <h2 class="logo-2 mb-lg-4 mb-3">
+                            <a href="/"><span class="fa fa-heartbeat"></span>Disease Prediction</a>
+                        </h2>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h4 class="sub-con-fo ad-info my-4">Catch on Social</h4>
+                        <ul class="w3layouts_social_list list-unstyled">
+                            <li>
+                                <a href="#" class="w3pvt_facebook">
+                                    <span class="fa fa-facebook-f"></span>
+                                </a>
+                            </li>
+                            <li class="mx-2">
+                                <a href="#" class="w3pvt_twitter">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="w3pvt_dribble">
+                                    <span class="fa fa-dribbble"></span>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a href="#" class="w3pvt_google">
+                                    <span class="fa fa-google-plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 footer-right">
+                        <div class="w3layouts-news-letter">
+                            <h3 class="footer-title mb-lg-4 mb-3">Newsletter</h3>
+
+                            <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+                            <form action="#" method="post" class="w3layouts-newsletter">
+                                <input type="email" name="Email" placeholder="Enter your email..." required="">
+                                <button class="btn1"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
+
+                            </form>
+                        </div>
+                        <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
+                            <div class="col-md-4 footer-grid_section_w3layouts">
+                                <h3 class="footer-title mb-lg-4 mb-3">Information</h3>
+                                <ul class="list-unstyled w3layouts-icons">
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="/about">About Us</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="/services">Services</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a href="/contact">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 footer-grid_section_w3layouts">
+                                <!-- social icons -->
+                                <div class="agileinfo_social_icons">
+                                    <h3 class="footer-title mb-lg-4 mb-3">Customer Service</h3>
+                                    <ul class="list-unstyled w3layouts-icons">
+
+                                        <li>
+                                            <a href="/about">About Us</a>
+                                        </li>
+                                        <li class="mt-3">
+                                            <a href="#">Delivery & Returns</a>
+                                        </li>
+                                        <li class="mt-3">
+                                            <a href="#">Waranty</a>
+                                        </li>
+                                        <li class="mt-3">
+                                            <a href="#">Terms & Condition</a>
+                                        </li>
+                                        <li class="mt-3">
+                                            <a href="#">Privacy Plolicy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- social icons -->
+                            </div>
+                            <div class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5">
+                                <h3 class="footer-title mb-lg-4 mb-3">Contact Info</h3>
+                                <div class="contact-info">
+                                    <div class="footer-address-inf">
+                                        <h4 class="ad-info mb-2">Phone</h4>
+                                        <p>+121 098 8907 9987</p>
+                                    </div>
+                                    <div class="footer-address-inf my-4">
+                                        <h4 class="ad-info mb-2">Email </h4>
+                                        <p><a href="mailto:info@example.com">info@example.com</a></p>
+                                    </div>
+                                    <div class="footer-address-inf">
+                                        <h4 class="ad-info mb-2">Location</h4>
+                                        <p>Honey Avenue, New York City</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+        <div class="cpy-right py-3">
+            <div class="container">
+                <div class="row">
+                    <p class="col-md-10 text-left">© 2019 Disease Prediction. All rights reserved | Design by
+                        <a href="http://w3layouts.com"> W3layouts.</a>
+                    </p>
+                    <!-- move top icon -->
+                    <a href="#home" class="move-top text-lg-right text-center col-md-2"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+                    <!-- //move top icon -->
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
