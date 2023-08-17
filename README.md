@@ -42,7 +42,7 @@ The Disease Prediction project aims to predict the likelihood of specific diseas
 
 1. Launch Anaconda Spyder:
 
-2. Open the `Disease_Prediction.py` notebook.
+2. Open the `Disease-Prediction.py` notebook.
 
 3. Follow the step-by-step instructions to explore the dataset, preprocess data, train models, and make predictions.
 
