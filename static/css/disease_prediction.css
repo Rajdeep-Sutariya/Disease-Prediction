@@ -1,0 +1,101 @@
+/*---------------------------disease_prediction /// dashboard opn -----------*/
+
+
+
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.head {
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    border-bottom: double;
+    text-align: center;
+}
+
+.nav.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+    }
+}
+
+.tablink {
+    background-color: #FEA127;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: green;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    width: 855px;
+    position: relative;
+    height: 350px;
+}
+
+#footer {
+    background-color: black;
+    text-decoration: underline;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration-color: white;
+    color: white;
+    align-self: bottom;
+}
+
+#Symptom {
+    background-color: #78A9FD;
+    width: 600px;
+    top: 45px;
+    left: 50px;
+    height: 450px;
+}
+
+#Doctor {
+    background-color: #78A9FD;
+    width: 600px;
+    top: 45px;
+    left: 50px
+}
+
+#Drug {
+    background-color: #78A9FD;
+    width: 600px;
+    top: 45px;
+    left: 50px
+}
+
+/*---------------------------disease_prediction /// dashboard close -----------*/

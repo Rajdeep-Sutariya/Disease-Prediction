@@ -1,0 +1,784 @@
+html,
+body {
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body a {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+}
+
+p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.9em;
+    letter-spacing: 1px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*-- header --*/
+/*-- header --*/
+
+a.navbar-brand {
+    font-size: 0.9em;
+    color: #fff;
+    padding: 0;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    position: relative;
+}
+
+a.navbar-brand.logo span {
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+/*-- //header --*/
+/* banner style */
+.banner_w3pvt {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-top {
+    background: url(../images/banner1.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+
+.banner-top1 {
+    background: url(../images/banner2.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+
+.banner-top2 {
+    background: url(../images/banner3.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+
+.banner-top3 {
+    background: url(../images/banner4.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+
+.banner-info {
+    padding-top: 17em;
+}
+
+.banner-w3layouts-inner {
+    text-align: left;
+    background: #fff;
+    padding: 2em;
+    width: 50%;
+}
+
+.banner-info h3 {
+    text-shadow: 3px 1px 3px rgba(45, 45, 45, 0.38);
+    font-size: 2.3em;
+    letter-spacing: 2px;
+    color: #484747;
+    font-weight: 600;
+    line-height: 1.5em;
+    text-transform: capitalize;
+}
+
+.banner-info h4 {
+    color: #f54785;
+    margin: 1em 0;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.banner-info i {
+    vertical-align: middle;
+}
+
+.banner-top,
+.banner-top1,
+.banner-top2,
+.banner-top3 {
+    min-height: 50em;
+}
+
+.overlay {
+    min-height: 50em;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay1 {
+    min-height: 750px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.read,
+.book-appo {
+    background-color: orange;
+    border-color: orange;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.read:hover,
+.book-appo {
+    opacity: 0.9;
+}
+
+.book-appo {
+    background: #f54785;
+}
+
+/*-- //banner style --*/
+
+/*-- //banner --*/
+
+/*-- banner --*/
+
+
+/* //banner */
+
+/* header */
+/* CSS Document */
+#header {
+    background: #fff;
+    position: fixed;
+    margin: 10px 50px 10px 50px;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 50px;
+    z-index: 333;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out 0s;
+    border-radius: 5px;
+
+}
+
+@media (max-width: 768px) {
+    #header {
+        background: white;
+        height: 60px;
+        margin: 0 0 0 0;
+    }
+}
+
+#header #logo {
+    padding: 15 0 0 0;
+    font-family: "cursive";
+}
+
+#header #logo h1 {
+    color: #101820;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 7px;
+}
+
+#header #logo h1 a {
+    color: #ffb733;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#header #logo h1 a span {
+    color: #072a4d;
+}
+
+#header #logo img {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu,
+.nav-menu * {
+    padding: 7px 0 0 0;
+    list-style: none;
+}
+
+.nav-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+
+}
+
+.nav-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-menu > li {
+    float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+    display: block;
+}
+
+.nav-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-menu ul li {
+    min-width: 180px;
+}
+
+#nav-menu-container {
+    float: right;
+    text-transform: uppercase;
+
+}
+
+@media (max-width: 1024px) {
+    #nav-menu-container {
+        display: none;
+    }
+}
+
+.nav-menu a {
+    padding: 0px 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+    font-family: "philosopher", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    outline: none;
+    letter-spacing: 0;
+    transition: 0.3s;
+}
+
+.nav-menu li:hover > a,
+.nav-menu > .menu-active > a {
+    color: #ffb733;
+    text-decoration: none;
+}
+
+.nav-menu li:visited {
+    color: black;
+}
+
+.nav-menu > li {
+    margin-left: 10px;
+}
+
+.nav-menu ul {
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    background: #fff;
+}
+
+.nav-menu ul li {
+    transition: 0.3s;
+}
+
+.nav-menu ul li a {
+    padding: 5px 10px;
+    color: #333;
+    transition: 0.3s;
+    display: block;
+    font-size: 14px;
+    text-transform: none;
+}
+
+.nav-menu ul li:hover > a {
+    color: orange;
+}
+
+.nav-menu ul ul {
+    margin: 0;
+}
+
+#mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 06px 15px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+    color: #555;
+    font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+    #mobile-nav-toggle {
+        display: inline;
+    }
+}
+
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    background: rgba(52, 59, 64, 0.9);
+    left: -260px;
+    width: 260px;
+    overflow-y: auto;
+    transition: 0.4s;
+}
+
+#mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#mobile-nav ul li {
+    position: relative;
+}
+
+#mobile-nav ul li a {
+    color: #ffb733;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 6px 22px 6px 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    outline: none;
+    letter-spacing: 0;
+}
+
+#mobile-nav #signinbtn {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-nav ul li a:hover {
+    color: orange;
+}
+
+#mobile-nav ul li li {
+    padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+    color: orange;
+}
+
+#mobile-nav ul .menu-item-active {
+    color: orange;
+}
+
+#mobile-body-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(52, 59, 64, 0.9);
+    display: none;
+}
+
+body.mobile-nav-active {
+    overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+    left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle i {
+    color: #fff;
+}
+
+
+
+li.icons a {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 50%;
+    line-height: 33px;
+    padding: 0;
+}
+
+li.icons a.face-bk {
+    background: #3b5998;
+}
+
+li.icons a.twitter {
+    background: #1da1f2;
+}
+
+li.icons a.dribble {
+    background: #ea4c89;
+}
+
+
+/*=======================login ===========================*/
+.login {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 125vh;
+    margin: 0px 0 50px;
+    box-sizing: border-box;
+
+}
+
+.login h1 {
+    font-weight: bold;
+    margin-top: -80px;
+}
+
+.login h2 {
+    text-align: center;
+}
+
+.login p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    color: #e6e6e6;
+}
+
+.login span {
+    font-size: 12px;
+}
+
+.login a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.login a:hover {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+button {
+
+    border: 1px solid orange;
+    background-color: orange;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin: 8px;
+}
+
+button:hover {
+    background-color: #ffb733;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.ghost {
+    background-color: orange;
+    border-color: orange;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 12px 45px;
+}
+
+button.ghost:hover {
+    background-color: #ffb733;
+}
+
+.login form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.login input {
+    background-color: #eee;
+    border: none;
+    padding: 20px 50px;
+    margin: 0 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+input,
+button,
+select,
+textarea {
+    background-color: #eee;
+    border: none;
+    padding: 20px 50px;
+    margin: 0 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.login .container {
+
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 1000px;
+    max-width: 100%;
+    margin-top: 70px;
+    max-height: 1000px;
+
+}
+
+.login .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.radioa{
+    display: inline;
+}
+
+input[type=radio]{
+    height: 15px;
+}
+
+.login .sign-in-container {
+    left: 0;
+    width: 100%;
+}
+
+.login .sign-up-container {
+    left: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.login .overlay-container-log {
+    max-width: 100%;
+    min-height: 500px;
+    margin-left: 370px;
+    text-align: center;
+    max-height: 1000px;
+}
+
+.login .overlay-panel {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50 50px;
+    text-align: center;
+    top: 0;
+    width: 384px;
+    height: 100%;
+}
+
+.login .social-container a {
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.login .social-container a:hover {
+    background-color: orange;
+    border-color: orange;
+}
+
+#reg {
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FE6607, #FE7907);
+    color: white;
+}
+
+#log {
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FE6607, #FE7907);
+    color: white;
+    max-height: 710px;
+}
+
+#regcon {
+    min-height: 710px;
+    margin-top: 250px;
+}
+
+#signupbtn {
+    margin-top: 15px;
+}
+
+/*---------------------------alert close -----------*/
+
+
+
+.head {
+    color: transparent;
+    font-family: sans-serif;
+    font-size: 30px;
+    border-bottom: double;
+    text-align: center;
+}
+
+.head h4 {
+    letter-spacing: 1px;
+    color: #3e3f40;
+    font-weight: 500;
+
+}
+
+#defaultOpen {
+    color: white;
+    width: 300px;
+    position: absolute;
+    right: 650px;
+    border-radius: 10px;
+
+}
+
+#doctortab {
+    color: white;
+    width: 300px;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width: 1025px) {
+
+    #defaultOpen {
+        color: white;
+        width: 300px;
+        position: absolute;
+        right: 340px;
+        border-radius: 10px;
+
+    }
+
+    #doctortab {
+        color: white;
+        width: 300px;
+        position: fixed;
+        border-radius: 10px;
+        left: 380px;
+    }
+}
+
+.labela{
+	margin-top: 10px;
+	margin-bottom: -15px;
+}
